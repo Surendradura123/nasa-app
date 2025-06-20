@@ -1,0 +1,99 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+@import "leaflet/dist/leaflet.css";
+
+
+body {  
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #0b0c10;
+  color: #fff;
+}
+
+.navbar {
+  background-color: #1f2833;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar a {
+  color: #66fcf1;
+  text-decoration: none;
+}
+
+.home-page {
+  padding: 2rem;
+}
+
+.apod-viewer {
+  text-align: center;
+}
+
+.apod-img {
+  max-width: 100%;
+  margin-top: 1rem;
+}
+
+
+.epic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.epic-item img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.epic-item p {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.epic-viewer input[type="date"] {
+  padding: 0.5rem;
+  margin: 0.5rem 0 1rem 0;
+  background: #1f2833;
+  color: #66fcf1;
+  border: 1px solid #66fcf1;
+  border-radius: 6px;
+  height: 300;
+  width: 300;
+}
+
+
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.media-item {
+  border: 1px solid #444;
+  padding: 1rem;
+  border-radius: 12px;
+  background: #1f2833;
+}
+
+.media-item img {
+  width: 100%;
+  border-radius: 8px;
+}
+
