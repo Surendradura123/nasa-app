@@ -77,3 +77,22 @@ describe('GET /api/mars', () => {
     expect(axios.get).toHaveBeenCalledWith(expect.stringContaining('&camera=FHAZ'));
   });
 });
+
+describe('GET /api/neo', () => {
+  it('returns daily NEO counts', async () => {
+    const mockResponse = {
+      near_earth_objects: {
+        '2025-06-18': [{ id: '1' }, { id: '2' }],
+        '2025-06-19': [{ id: '3' }],
+      },
+    };
+
+    axios.get.mockResolvedValueOnce({ data: mockResponse });
+
+    const res = await request(app).get('/api/neo?start_date=2025-06-18&end_date=2025-06-19');
+
+    expect(res.statusCode).toBe(200);
+    expect(res.body.near_earth_objects).toBeDefined();
+    expect(Object.keys(res.body.near_earth_objects).length).toBe(2);
+  });
+});
