@@ -44,8 +44,4 @@ app.get('/api/epic', async (req, res) => {
   }
 });
 
-
-
-
-
 module.exports = app;

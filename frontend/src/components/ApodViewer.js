@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import API_BASE from '../api';
 
 const ApodViewer = () => {
   const [apod, setApod] = useState(null);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/apod')
+    axios.get(`${API_BASE}/api/apod`)
       .then(res => setApod(res.data))
       .catch(err => setError('Failed to fetch data from NASA API'));
   }, []);

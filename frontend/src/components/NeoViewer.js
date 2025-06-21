@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import NeoChart from './NeoChart';
 import NeoTable from './NeoTable';
+import API_BASE from '../api';
 
 const NeoViewer = () => {
   const [startDate, setStartDate] = useState('');
@@ -13,10 +14,10 @@ const NeoViewer = () => {
 
   const fetchNEO = async () => {
     try {
-      const res1 = await fetch(`http://localhost:5000/api/neo?start_date=${startDate}&end_date=${endDate}`);
+      const res1 = await fetch(`${API_BASE}/api/neo?start_date=${startDate}&end_date=${endDate}`);
       const data1 = await res1.json();
 
-      const res2 = await fetch(`http://localhost:5000/api/neo/list?start_date=${startDate}&end_date=${endDate}`);
+      const res2 = await fetch(`${API_BASE}/api/neo/list?start_date=${startDate}&end_date=${endDate}`);
       const data2 = await res2.json();
 
       const neoArray = Object.entries(data1.near_earth_objects).map(([date, objects]) => ({

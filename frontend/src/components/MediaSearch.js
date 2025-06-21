@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import API_BASE from '../api';
 
 const MediaSearch = () => {
   const [query, setQuery] = useState('');
@@ -8,7 +9,7 @@ const MediaSearch = () => {
 
   const handleSearch = async () => {
     try {
-      const res = await fetch(`http://localhost:5000/api/nasa-search?q=${query}&media_type=${mediaType}`);
+      const res = await fetch(`${API_BASE}/api/nasa-search?q=${query}&media_type=${mediaType}`);
       const data = await res.json();
       setResults(data.items || []);
       setError('');

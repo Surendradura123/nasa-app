@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import API_BASE from '../api';
 
 const EpicViewer = () => {
   const [images, setImages] = useState([]);
@@ -20,7 +20,7 @@ const EpicViewer = () => {
 
   Promise.all(
     pastDays.map((date) =>
-      fetch(`http://localhost:5000/api/epic?date=${date}`)
+      fetch(`${API_BASE}/api/epic?date=${date}`)
         .then((res) => res.ok ? res.json() : [])
         .then((images) => ({ date, count: images.length }))
     )
@@ -29,7 +29,7 @@ const EpicViewer = () => {
 
   const fetchData = (date = '') => {
     const dateQuery = date ? `?date=${date}` : '';
-    fetch(`http://localhost:5000/api/epic${dateQuery}`)
+    fetch(`${API_BASE}/api/epic${dateQuery}`)
       .then((res) => {
         if (!res.ok) throw new Error('Failed to fetch');
         return res.json();

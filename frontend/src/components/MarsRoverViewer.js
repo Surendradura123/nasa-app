@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import API_BASE from '../api';
 
 const MarsRoverViewer = () => {
   const [photos, setPhotos] = useState([]);
@@ -11,7 +12,7 @@ const MarsRoverViewer = () => {
   const fetchPhotos = async () => {
     try {
       const { data } = await axios.get(
-        `http://localhost:5000/api/mars?rover=${rover}&sol=${sol}&camera=${camera}`
+        `${API_BASE}/api/mars?rover=${rover}&sol=${sol}&camera=${camera}`
       );
       setPhotos(data.photos || []);
       setError('');
