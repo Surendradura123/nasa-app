@@ -4,8 +4,8 @@ This is the project of NASA API app where the app is develped by using NASA API 
 
 This app is full-stack project.
 
-Frontend is  devloped by using React.
-Backend is devloped by using Node and Express.
+Frontend is  developed by using React.
+Backend is developed by using Node and Express.
 
 In this project, I used 5 different API of the NASA API. Each API is listed below.
 ● Astronomy Picture of the Day (APOD)
