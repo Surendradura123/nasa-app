@@ -46,6 +46,11 @@ Serves NASA API endpoints via:
 
 /api/epic
 
+/api/neo
+
+/api/nasa-search
+
+
 Handles query params like ?sol=, ?camera=, ?date=
 
 Secure API key usage with .env
@@ -93,6 +98,8 @@ Route	Description
 /api/apod	Astronomy Picture of the Day
 /api/mars	Mars rover images by sol/camera
 /api/epic?date=	EPIC Earth imagery for a date
+/api/neo(Note: Press Fetch button to see the result)
+/api/nasa-search(Note: Press Search button to see the result)
 
 🚀 Deployment
 Frontend: Vercel
@@ -103,22 +110,21 @@ Backend: Render or Railway
 Add screenshots of:
 
 The EPIC carousel
+![image](https://github.com/user-attachments/assets/eb8e65f8-eed4-4dac-98af-166310cd6062)
+
+APOD
 ![image](https://github.com/user-attachments/assets/5a4ba622-1f21-46b0-b39e-ff45dc6699ba)
 
 Mars photo viewer
+![image](https://github.com/user-attachments/assets/e9dc6c79-520f-4d5c-a36b-6abbc13a7981)
 
-Timeline chart
+NEO
+![image](https://github.com/user-attachments/assets/bd1c52b2-91d5-402d-9227-514ce19cb49d)
 
-Navbar and layout
+Media Library
+![image](https://github.com/user-attachments/assets/0b8d8bda-1c0b-4da3-8509-bd68119d05d0)
 
-🧠 Future Enhancements
- Add EPIC video/GIF export
 
- Full NEO and Media Library integrations
-
- User favorites or collections
-
- Offline cache with service workers
 
 📜 License
 MIT © Surendradura123
